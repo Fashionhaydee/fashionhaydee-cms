@@ -1,0 +1,503 @@
+
+/* 基础排版 */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: #222;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1em;
+  background: #f2f2f2;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1.2em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Banner 区域 */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3em;
+  gap: 2em;
+  background: #fff;
+}
+
+.banner-left img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.banner-right {
+  max-width: 500px;
+}
+
+.banner-right h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 768px) {
+  #contact {
+    padding: 40px 16px;
+  }
+
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-subtext {
+    font-size: 0.95rem;
+    margin-bottom: 1.5em;
+    padding: 0 10px;
+  }
+
+  form[name="contact"] {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  form[name="contact"] input,
+  form[name="contact"] textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  form[name="contact"] button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+  }
+
+  .contact-info-line {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    margin-top: 1.5em;
+    text-align: left;
+  }
+
+  .contact-info-line svg,
+  .contact-info-line::before {
+    display: none;
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 0.6em 1.4em;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* About */
+#about, #services, #gallery, #contact {
+  padding: 3em 2em;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.studio-photos {
+  display: flex;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.studio-photos img {
+  width: 48%;
+  border-radius: 8px;
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+}
+
+.service-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5em;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Contact */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+#contact input, #contact textarea {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+#contact button {
+  width: fit-content;
+  padding: 0.7em 1.6em;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Footer */
+footer {
+  background: #f4f4f4;
+  padding: 2em 1em;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+.footer-links a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ✅ 响应式布局优化 */
+@media (max-width: 768px) {
+  .banner {
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .studio-photos {
+    flex-direction: column;
+  }
+
+  .studio-photos img {
+    width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    padding: 0.5em;
+  }
+
+  nav ul li {
+    margin: 0.5em;
+  }
+}
+.gallery-section {
+  margin: 3rem 0;
+  padding: 1rem;
+}
+.gallery-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gallery-grid figure {
+  text-align: center;
+}
+.gallery-grid img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.gallery-grid figcaption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.gallery-grid .video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+.gallery-showcase {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #fefaf5;
+}
+.gallery-showcase h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.gallery-description {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: #444;
+}
+.gallery-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+.gallery-button-group {
+  margin-top: 2rem;
+}
+.gallery-button-group .cta-button {
+  margin: 0 0.5rem;
+}
+/* ===== Contact Form Styling ===== */
+#contact {
+  padding: 60px 20px;
+  background-color: #fefcf9;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-subtext {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form[name="contact"] {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form[name="contact"] input,
+form[name="contact"] textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+form[name="contact"] textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form[name="contact"] .cta-button {
+  padding: 14px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #d8b96c;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form[name="contact"] .cta-button:hover {
+  background-color: #bfa253;
+}
+
+/* Mobile Optimized */
+@media screen and (max-width: 600px) {
+  #contact h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-subtext {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  form[name="contact"] input,
+  form[name="contact"] textarea {
+    font-size: 0.95rem;
+  }
+
+  form[name="contact"] .cta-button {
+    width: 100%;
+  }
+}
+
+
+/* === Contact Patch Start === */
+/* === Contact Section Clean Final === */
+#contact {
+  padding: 60px 20px;
+  background-color: #fefcf9;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.contact-subtext {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form[name="contact"] {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+form[name="contact"] input,
+form[name="contact"] textarea {
+  width: 100%;
+  padding: 1em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+form[name="contact"] textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form[name="contact"] .cta-button {
+  background-color: #d8b96c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 0.8em 1.6em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form[name="contact"] .cta-button:hover {
+  background-color: #c0a054;
+}
+
+@media screen and (max-width: 600px) {
+  #contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-subtext {
+    font-size: 0.95rem;
+  }
+
+  form[name="contact"] input,
+  form[name="contact"] textarea {
+    font-size: 0.95rem;
+  }
+
+  form[name="contact"] .cta-button {
+    width: 100%;
+  }
+}
+/* === Responsive & Gallery Enhancements === */
+
+/* 1. 表单在移动端响应式调整 */
+@media (max-width: 768px) {
+  form[name="contact"] {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  form[name="contact"] input,
+  form[name="contact"] textarea {
+    width: 100%;
+  }
+}
+
+/* 2. gallery 图片自动适应 */
+.gallery-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 3. 按钮间距调整 */
+.cta-button {
+  margin-bottom: 1rem;
+}
+/* === Custom Process Section === */
+.custom-process {
+  padding: 60px 20px;
+  background-color: #fef9f4;
+  text-align: center;
+}
+
+.custom-process h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.process-subtext {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2em;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.process-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+/* 限制 custom process 图片最大宽度 */
+.process-image-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-image-wrapper img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
